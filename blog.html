@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- Google Fonts  -->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+<!-- required link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<!-- CSS Import -->
+<link rel="stylesheet" href="style.css">
+
+
+<script>
+function getContent(url)
+{
+var xmlhttp;
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("contentArea").innerHTML=xmlhttp.responseText;
+    }
+  }
+
+xmlhttp.open('GET',url,true);
+xmlhttp.send();
+}
+
+function clearContent()
+{
+  document.getElementById('contentArea').innerHTML=' ';
+}
+</script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="logo.png" width="40" height="40"  alt="error 404">
+      </a>
+    <a class="navbar-brand" href="#" style="color: orangered">YummyFoods</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search food" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+            <!-- Example single danger button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Sign in
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Customer</a>
+                    <a class="dropdown-item" href="#">Admin</a>
+                </div>
+            </div>
+
+            <button class="btn btn-danger">Sign up</button>
+        </div>
+    </div>
+</nav>
+<h2>For more information hover over the images</h2>
+<img src="img1.jpg" height="300" width="300" onmouseover='getContent("img1.html")' onmouseout='clearContent()'/><br>
+<img src="img2.jpg" height="300" width="300" onmouseover='getContent("img2.html")' onmouseout='clearContent()'/><br>
+<img src="img3.jpg" height="300" width="300" onmouseover='getContent("img3.html")' onmouseout='clearContent()'/><br>
+<img src="img4.jpg" height="300" width="300" onmouseover='getContent("img4.html")' onmouseout='clearContent()'/><br>
+<img src="img5.jpg" height="300" width="300" onmouseover='getContent("img5.html")' onmouseout='clearContent()'/><br>
+<img src="img6.jpg" height="300" width="300" onmouseover='getContent("img6.html")' onmouseout='clearContent()'/><br>
+<img src="img7.jpg" height="300" width="300" onmouseover='getContent("img7.html")' onmouseout='clearContent()'/><br>
+<img src="img8.jpg" height="300" width="300" onmouseover='getContent("img8.html")' onmouseout='clearContent()'/><br>
+<img src="img9.jpg" height="300" width="300" onmouseover='getContent("img9.html")' onmouseout='clearContent()'/><br>
+<img src="img10.jpg" height="300" width="300" onmouseover='getContent("img10.html")' onmouseout='clearContent()'/>
+<div class="box" id="contentArea"><br><br><br><br> </div>
+
+
+</body>
+</html>
