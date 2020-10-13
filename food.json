@@ -4,22 +4,295 @@
 		"name": "Aloo Tikki",
 		"category": "Veg"
 	},
+	{
+		"abbr": "AL",
+		"name": "Aloo Matar",
+		"category": "Veg"
+	},
+	
+	{
+		"abbr": "AM",
+		"name": "Amritsari Kulcha",
+		"category": "Veg"
+	},
 	
 	{
 		"abbr": "BI",
 		"name": "Biryani",
 		"category": "Veg"
 	},
-	
 	{
-		"abbr": "CH",
-		"name": "Chole paratha",
+		"abbr": "BH",
+		"name": "Bhindi Masala",
+		"category": "Veg"
+	},
+	{
+		"abbr": "BU",
+		"name": "Butter Chicken",
+		"category": "Non-Veg"
+	},
+	{
+		"abbr": "BU",
+		"name": "Butter Dosa",
 		"category": "Veg"
 	},
 	
 	{
+		"abbr": "CH",
+		"name": "Chole bhature",
+		"category": "Veg"
+	},
+	{
+		"abbr": "CH",
+		"name": "Chana Masala",
+		"category": "Veg"
+	},
+	{
+		"abbr": "CH",
+		"name": "Chapati",
+		"category": "Veg"
+	},
+	{
+		"abbr": "CH",
+		"name": "Chicken Tikka",
+		"category": "Non-Veg"
+	},
+	{
+		"abbr": "CH",
+		"name": "Chicken 65",
+		"category": "Non-Veg"
+	},
+	{
 		"abbr": "DA",
 		"name": "Dahi vada",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "DA",
+		"name": "Dal Makhani",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "DU",
+		"name": "Dum Aloo",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "DH",
+		"name": "Dhokla",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "FR",
+		"name": "Fried Rice",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "FR",
+		"name": "Fried Rice",
+		"category": "Non-Veg"	
+	},
+	
+	{
+		"abbr": "FR",
+		"name": "French Bean Aloo",
+		"category": "Veg"	
+	},
+	
+	{
+		"abbr": "GA",
+		"name": "Gajar Ka Halwa",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "GO",
+		"name": "Gobhi Matar",
+		"category": "Veg"	
+	},
+	
+	{
+		"abbr": "ID",
+		"name": "Idli",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "IC",
+		"name": "Icecream",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "JA",
+		"name": "Jalebi",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "KA",
+		"name": "Kachori",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "KA",
+		"name": "Kadhai Paneer",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "KH",
+		"name": "Kheer",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "KH",
+		"name": "Khichdi",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "KU",
+		"name": "Kulfi Falooda",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "LI",
+		"name": "Litti Chokha",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "MI",
+		"name": "Misal Pav",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "MU",
+		"name": "Mushroom Matar",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "MA",
+		"name": "Matar Paneer",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "MA",
+		"name": "Masala Dosa",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "ME",
+		"name": "Mendu Vada",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "NA",
+		"name": "Naan",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "OM",
+		"name": "Omlette",
+		"category": "Non-Veg"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Pav Bhaji",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Palak Paneer",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Paneer Butter Masala",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Paneer Tikka",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Pani Puri",
+		"category": "Snack"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Papad",
+		"category": "Snack"	
+	},
+	{
+		"abbr": "PA",
+		"name": "Paratha",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "PO",
+		"name": "Poha",
+		"category": "Snack"	
+	},
+	{
+		"abbr": "RA",
+		"name": "Rajma Chaval",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "RA",
+		"name": "Ras Malai",
+		"category": "Desert"	
+	},
+	{
+		"abbr": "SA",
+		"name": "Samosa",
+		"category": "Snack"	
+	},
+	{
+		"abbr": "SA",
+		"name": "Sada Dosa",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "SH",
+		"name": "Shahi Paneer",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "TA",
+		"name": "Tandoori Chicken",
+		"category": "Non-Veg"	
+	},
+	{
+		"abbr": "TA",
+		"name": "Tandoori Fish",
+		"category": "Non-Veg"	
+	},
+	{
+		"abbr": "UT",
+		"name": "Uttappa",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "UT",
+		"name": "Uttappa",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "UP",
+		"name": "Upma",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "VA",
+		"name": "Vada Pav",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "VA",
+		"name": "Vada Sambhar",
+		"category": "Veg"	
+	},
+	{
+		"abbr": "VE",
+		"name": "Veg Kolhapuri",
 		"category": "Veg"	
 	}
 	
