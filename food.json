@@ -1,0 +1,26 @@
+[
+	{
+		"abbr": "AL",
+		"name": "Aloo Tikki",
+		"category": "Veg"
+	},
+	
+	{
+		"abbr": "BI",
+		"name": "Biryani",
+		"category": "Veg"
+	},
+	
+	{
+		"abbr": "CH",
+		"name": "Chole paratha",
+		"category": "Veg"
+	},
+	
+	{
+		"abbr": "DA",
+		"name": "Dahi vada",
+		"category": "Veg"	
+	}
+	
+]
