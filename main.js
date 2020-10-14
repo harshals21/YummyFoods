@@ -6,23 +6,23 @@ const searchFood = async searchText => {
     const foods = await res.json();
 
     // Get matches to current text input
-    let matches = foods.filter(food =>{
+    let matches = foods.filter(food => {
         const regex = new RegExp(`^${searchText}`, 'gi');
         return food.name.match(regex) || food.abbr.match(regex);
     });
 
-    if(searchText.length === 0){
+    if (searchText.length === 0) {
         matches = [];
         matchlist.innerHTML = '';
     }
-    
-    console.log("hi",matches);
-    outputHtml(matches);    
-};
-    // Show results in HTML
 
-const outputHtml = matches =>{
-    if(matches.length > 0){
+    console.log("hi", matches);
+    outputHtml(matches);
+};
+// Show results in HTML
+
+const outputHtml = matches => {
+    if (matches.length > 0) {
         const html = matches.map(match => `
         
         <option>
@@ -31,11 +31,20 @@ const outputHtml = matches =>{
         </div>
         </option>
         `).join('');
-    
-    matchlist.innerHTML = html;
+
+        matchlist.innerHTML = html;
     }
-}    
+}
 
 search.addEventListener('input', () => searchFood(search.value));
 
 // (${match.abbr}) 
+
+var form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var search = form.querySelector("input[type=search]");
+    search.value = "" + search.value;
+    form.submit();
+});
