@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sign up form</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('assests/img/img3.jpg');
+            background-size: cover;
+            font-family: Arial;
+        }
+
+        .wrap {
+            max-width: 350px;
+            border-radius: 20px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0);
+            box-sizing: border-box;
+            padding: 40px;
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            color :#003366;
+        }
+        input[type=text],input[type=password]{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: rgba(0, 0, 0, 0, 10);
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted black;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        
+        }
+        input[type=submit] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 5px;
+            outline: none;
+            margin-top: 30px;
+            border: none;
+            background: #60adda;
+            opacity:0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            margin-left: 6px;
+
+
+        }
+        input[type=submit]:hover {
+            background: #003366;
+            opacity: 0.7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>Sign Up Here</h2>
+        <form action="connect.php" method="post"> 
+            <input type="text" placeholder="First Name " name="Fname" required>
+            <input type="text" placeholder="Last Name " name="Lname" required>
+            <input type="text" placeholder="Email " name="Email" required>
+            <input type="text" placeholder="Username " name="Username" required>
+            <input type="password" placeholder="Password " name="Password" required>
+            <input type="submit" name="save" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
