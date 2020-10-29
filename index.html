@@ -60,9 +60,18 @@
             </datalist>
             <div class="mx-2">
                 <!-- Example single danger button -->
-                <button onclick="location.href='login.html'" class="btn btn-danger">Log In</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Sign in
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Customer</a>
+                        <a class="dropdown-item" href="#">Admin</a>
+                    </div>
+                </div>
 
-                <button class="btn btn-danger">Sign up</button>
+                <button onclick="location.href='signup.html'" class="btn btn-danger" type="submit" >Sign up</button>
             </div>
         </div>
     </nav>
