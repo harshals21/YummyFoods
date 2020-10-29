@@ -9,6 +9,18 @@
   align-items: center;
 }
 
+#navbar{
+  background-color: #0009;
+}
+
+nav ul li{
+  transition: 0.5s all;
+}
+
+nav ul li:hover{
+  background-color:rgb(208, 128, 240);
+}
+
 #home::before{ 
   content: "";
   position: absolute;
@@ -184,3 +196,4 @@ footer{
   background: #f1f1f1;
   position: static;
 }
+
