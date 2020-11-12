@@ -41,4 +41,5 @@ else
 }
 mysqli_close($conn);
 }
+print_r(error_get_last());
 ?>
