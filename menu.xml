@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="menu.xsl" ?>
+
+<CATALOG>
+
+<CD>
+<Food_Name>Aloo Paratha</Food_Name>
+<Type>Veg</Type>
+<Price>200</Price>
+
+</CD>
+
+<CD>
+<Food_Name>Alfredo Pizza</Food_Name>
+<Type>Non-Veg </Type>
+<Price>150</Price>
+
+</CD>
+
+<CD><Food_Name>Almond cookie</Food_Name>
+<Type>Veg</Type>
+<Price>250</Price>
+
+</CD>
+
+<CD>
+<Food_Name>Biryani</Food_Name>
+<Type>Veg</Type>
+<Price>120</Price>
+
+</CD>
+
+<CD>
+<Food_Name>Butter Dosa</Food_Name>
+<Type>Veg</Type>
+<Price>80</Price>
+</CD>
+
+<CD>
+<Food_Name>Chilli Potato</Food_Name>
+<Type>Veg</Type>
+<Price>150</Price>
+</CD>
+
+<CD>
+<Food_Name>Chicken Tikka</Food_Name>
+<Type>Non-Veg</Type>
+<Price>300</Price>
+</CD>
+
+<CD>
+<Food_Name>Gulab Jamun</Food_Name>
+<Type>Desert</Type>
+<Price>230</Price>
+</CD>
+
+<CD>
+<Food_Name>Kachori</Food_Name>
+<Type>Veg</Type>
+<Price>25</Price>
+</CD>
+
+<CD>
+<Food_Name>Pav Bhaji</Food_Name>
+<Type>Veg</Type>
+<Price>120</Price>
+</CD>
+
+</CATALOG>
