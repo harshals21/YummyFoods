@@ -8,17 +8,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <head>
   <style type="text/css">
       body {
-              margin: 0;
-              padding: 0;
-              background: url('assests/img/img1.jpg');
-              background-size: cover;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #FEE2E2;
+              <!-- background: url('assests/img/img1.jpg'); -->
+              <!-- background-size: cover; -->
               font-family: Arial;
               
                          }
   </style>
   </head>
   <body>
-  <h2>FOOD MENU</h2>
+  <!-- <h2>FOOD MENU</h2> -->
   <table border="3">
     <tr bgcolor="tomato">
       <th>Food_Name</th>

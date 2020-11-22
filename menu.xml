@@ -67,4 +67,40 @@
 <Price>120</Price>
 </CD>
 
+<CD>
+<Food_Name>Paneer Masala</Food_Name>
+<Type>Veg</Type>
+<Price>220</Price>
+</CD>
+
+<CD>
+<Food_Name>Chicken Chilly</Food_Name>
+<Type>Non-Veg</Type>
+<Price>250</Price>
+</CD>
+
+<CD>
+<Food_Name>Chinese Manchurian</Food_Name>
+<Type>Veg</Type>
+<Price>160</Price>
+</CD>
+
+<CD>
+<Food_Name>Dal Makhani</Food_Name>
+<Type>Veg</Type>
+<Price>140</Price>
+</CD>
+
+<CD>
+<Food_Name>Chole Bhature</Food_Name>
+<Type>Veg</Type>
+<Price>120</Price>
+</CD>
+
+<CD>
+<Food_Name>Chilly Potato</Food_Name>
+<Type>Veg</Type>
+<Price>110</Price>
+</CD>
+
 </CATALOG>
