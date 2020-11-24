@@ -1,45 +1,33 @@
 <?php
+ 
 
-$server_name="localhost";
-$username= "root";
-$password="";
-$database_name="signup";
-
-
-// Create connection
-$conn=mysqli_connect($server_name, $username,$password,$database_name);
+session_start();
+header('location:login.html');
 
 
+$con = mysqli_connect('localhost','root','');
 
+mysqli_select_db($con, 'signup');
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-if(isset($_POST['save']))
-{
-    
 $Fname = $_POST['Fname'];
-$Lname= $_POST['Lname'];
+$Lname = $_POST['Lname'];
 $Email = $_POST['Email'];
 $Username = $_POST['Username'];
 $Password = $_POST['Password'];
 
 
-//for inserting the values to mysql database
+$s = " select * from user_info where Username = '$Username'";
 
-$sql_query ="INSERT INTO user_info(Fname, Lname, Email, Username, Password)
-VALUES ('$Fname','$Lname','$Email','$Username','$Password')";
+$result = mysqli_query($con, $s);
 
-if(mysqli_query($conn, $sql_query))
-{
-    echo "Registration Successfully....";
+$num = mysqli_num_rows($result);
+
+if($num == 1){
+	echo"Username Already exist";
+}else{
+	$reg= "insert into user_info(Fname , Lname , Email , Username , Password) values ('$Fname' , '$Lname' , '$Email' , '$Username' , '$Password')";
+	mysqli_query($con, $reg);
+	echo" Registration Successful";
 }
-else
-{
-    echo "Error: " .$sql . "" . mysqli_error($conn);
-}
-mysqli_close($conn);
-}
-print_r(error_get_last());
+
 ?>
