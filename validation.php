@@ -19,7 +19,7 @@ $result = mysqli_query($con, $s);
 $num = mysqli_num_rows($result);
 
 if($num == 1){
-    $_SESSION['Uname'] = $Username;
+    $_SESSION['username'] = $Username;
     header('location:blog.php');	
 }else{
     header('location:signup.html');
