@@ -22,7 +22,7 @@
 <body>
 
     <nav class="navbar navbar-light" style="background-color: rgb(247, 235, 221)">
-        <a class="navbar-brand">Hello! <h1> <?php echo $_SESSION['Uname']; ?></h1></a>
+        <a class="navbar-brand"><small>Hello!</small>  <b><?php echo $_SESSION['username']; ?></b></a>
         <!-- <form class="form-inline"> -->
           <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
           <button onclick="location.href='logout.php'" class="btn btn-danger" type="submit">Log Out</button>
