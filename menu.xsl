@@ -6,6 +6,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
   <html>
   <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+
+    <!-- Google Fonts  -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet"/> -->
+    <!-- required link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
   <style type="text/css">
       body {
               display: flex;
@@ -16,7 +23,39 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <!-- background-size: cover; -->
               font-family: Arial;
               
-                         }
+            }
+        .btn {
+             padding:15px 25px;
+             position: absolute;
+             width: 300px;
+             margin-top:570px;
+             
+        }
+        
+        .btn span {
+             cursor: pointer;
+             display: inline-block;
+             position: relative;
+             transition: 0.5s;
+          }
+
+        .btn span:after {
+             content: '\00bb';
+             position: absolute;
+             opacity: 0;
+             top: 0;
+             right: -20px;
+             transition: 0.5s;
+          }
+
+        .btn:hover span {
+             padding-right: 25px;
+          }
+
+        .btn:hover span:after {
+             opacity: 1;
+             right: 0;
+          }
   </style>
   </head>
   <body>
@@ -35,6 +74,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </tr>
     </xsl:for-each>
   </table>
+  <button onclick="location.href='order.html'" class="btn btn-danger"><span>Explore More!</span></button>
+  
   </body>
   </html>
 </xsl:template>

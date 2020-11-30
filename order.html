@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <title>YummyFoods|Explore</title>
+
+    <!-- required link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <style>
+        section div span{
+            position: absolute;
+            top: 14px;
+            left: 13px;
+            width: 300px;
+            height: 186px;
+            display: none;
+        }
+        ul li h3 {
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        ul li h3:before {
+            content: attr(data-count);
+            position: absolute;
+            color: white;
+            right: 16px;
+            font-size: 15px;
+            text-align: center;
+            top: -12px;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            opacity: 0;
+        }
+        ul li h3.zero:before{
+            opacity: 1;
+        }
+
+        .select {
+            width: 60%;
+            height: 580px;
+            background: lightgoldenrodyellow;
+            position: absolute;
+            top: -1000px;
+            left: 20%;
+            transition: 0.5s;
+            overflow-y: auto;
+            margin: auto;
+        }
+        .select.display{
+            top: 10px;
+            text-align: center;
+        }
+
+        .select div {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            padding: 5px;
+            border: 1px solid white;
+            position: relative;
+            margin: 5px auto;
+        }
+
+        .select div img {
+            width: 300px;
+            height: 100%;
+        }
+
+        .select div p {
+            padding: 35px;
+            color: white;
+        }
+
+        .select div h3,
+        .select div button {
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            color: black;
+        }
+
+        .select div span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mh-10">
+        <a class="navbar-brand" href="#">
+            <img src="/logo.png" width="40" height="40" alt="error 404">
+        </a>
+        <a class="navbar-brand" href="#" style="color: orangered">YummyFoods</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <h3><a href="#"><i class="fas fa-shopping-cart"></i></a></h3>
+                </li>
+
+
+
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <div class="auto-search">
+
+
+    </div>
+
+
+    <section class="text-gray-500 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img1.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m1" class="text-white title-font text-lg font-medium">Aloo Paratha </h2>
+                        <p class="mt-1">&#8377; 200 <span></span><button onclick="myFunction1()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img2.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">NON-VEG</h3>
+                        <h2 id="m2" class="text-white title-font text-lg font-medium">Alfredo Pizza</h2>
+                        <p class="mt-1">&#8377; 150 <button onclick="myFunction2()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img3.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">DESERT</h3>
+                        <h2 id="m3" class="text-white title-font text-lg font-medium">Almond Cookie</h2>
+                        <p class="mt-1">&#8377; 250 <button onclick="myFunction3()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img4.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m4" class="text-white title-font text-lg font-medium">Biryani</h2>
+                        <p class="mt-1">&#8377; 120 <button onclick="myFunction4()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img5.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m5" class="text-white title-font text-lg font-medium">Butter Dosa</h2>
+                        <p class="mt-1">&#8377; 80 <button onclick="myFunction5()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img6.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m6" class="text-white title-font text-lg font-medium">Chilli Potato</h2>
+                        <p class="mt-1">&#8377; 150 <button onclick="myFunction6()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img7.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">NON-VEG</h3>
+                        <h2 id="m7" class="text-white title-font text-lg font-medium">Chicken Tikka</h2>
+                        <p class="mt-1">&#8377; 300 <button onclick="myFunction7()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img8.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">DESERT</h3>
+                        <h2 id="m8" class="text-white title-font text-lg font-medium">Gulab Jamun</h2>
+                        <p class="mt-1">&#8377; 230 <button onclick="myFunction8()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img9.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m9" class="text-white title-font text-lg font-medium">Kachori</h2>
+                        <p class="mt-1">&#8377; 25 <button onclick="myFunction9()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img10.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m10" class="text-white title-font text-lg font-medium">Pav Bhaji</h2>
+                        <p class="mt-1">&#8377; 120 <button onclick="myFunction10()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" id="m1" class="object-cover object-center w-full h-full block" src="/img11.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m11" class="text-white title-font text-lg font-medium">Paneer Masala</h2>
+                        <p class="mt-1">&#8377; 220 <button onclick="myFunction11()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img12.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">NON-VEG</h3>
+                        <h2 id="m12" class="text-white title-font text-lg font-medium">Chicken Chilly</h2>
+                        <p class="mt-1">&#8377; 250 <button onclick="myFunction12()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img13.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m13" class="text-white title-font text-lg font-medium">Chinese Manchurian</h2>
+                        <p class="mt-1">&#8377; 160 <button onclick="myFunction13()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img14.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m14" class="text-white title-font text-lg font-medium">Dal Makhani</h2>
+                        <p class="mt-1">&#8377; 140 <button onclick="myFunction14()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img15.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">VEG</h3>
+                        <h2 id="m15" class="text-white title-font text-lg font-medium">Chhole Bhature</h2>
+                        <p class="mt-1">&#8377; 120 <button onclick="myFunction15()" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="select">
+
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    var noti = document.querySelector('ul li h3');
+    var select = document.querySelector('.select');
+    var button = document.getElementsByTagName('button');
+    
+    for(but of button)
+    {
+        but.addEventListener('click', (e)=>{
+            var add = Number(noti.getAttribute('data-count')|| 0);
+            noti.setAttribute('data-count', add + 1);
+            noti.classList.add('zero');
+
+            //copy and paste element
+            var parent = e.target.parentNode;
+            var clone = parent.cloneNode(true);
+            select.appendChild(clone);
+            clone.lastElementChild.innerText = "Buy-now";
+            if(clone){
+                noti.onclick =()=>{
+                    select.classList.toggle('display');
+                }
+            }
+        })
+    }
+    function myFunction1() {
+        var itm = document.getElementById("m1").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+    function myFunction2() {
+        var itm = document.getElementById("m2").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction3() {
+        var itm = document.getElementById("m3").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction4() {
+        var itm = document.getElementById("m4").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction5() {
+        var itm = document.getElementById("m5").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction6() {
+        var itm = document.getElementById("m6").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction7() {
+        var itm = document.getElementById("m7").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction8() {
+        var itm = document.getElementById("m8").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction9() {
+        var itm = document.getElementById("m9").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction10() {
+        var itm = document.getElementById("m10").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction11() {
+        var itm = document.getElementById("m11").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction12() {
+        var itm = document.getElementById("m12").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction13() {
+        var itm = document.getElementById("m13").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction14() {
+        var itm = document.getElementById("m14").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+        function myFunction15() {
+        var itm = document.getElementById("m15").lastChild;
+        var cln = itm.cloneNode(true);
+        select.appendChild(cln);
+        }
+    
+    
+</script>
