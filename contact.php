@@ -1,4 +1,39 @@
-<!doctype html>
+<?php
+
+$result="";
+
+if(isset($_POST['save'])){
+    require 'phpmailer/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+
+    $mail->isSMTP();
+    $mail->Host='smtp.gmail.com';
+    $mail->Port='587';
+    $mail->SMTPAuth=true;
+    $mail->SMTPSecure='tls';
+    $mail->Username='yfoods14@gmail.com';
+    $mail->Password='Yummy1234';
+    
+
+    $mail->setFrom($_POST['email']);
+    $mail->addAddress('yfoods14@gmail.com');
+    $mail->addReplyTo($_POST['email']);
+
+    $mail->isHTML(true);
+    $mail->Subject='Form Submission: '.$_POST['subject'];
+    $mail->Body='<h1 align=center>Name: '.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['msg'].'<br>PHONE: '.$_POST['phnum'].'</h1>';
+
+    if(!$mail->send()){
+        $result="Something went wrong. Please try again.";
+    }
+    else{
+        $result="Thanks ".$_POST['name']." for contacting us. We'll get back to you soon!";
+    }
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -66,7 +101,7 @@
                     <a class="nav-link" href="./gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                    <a class="nav-link" href="./contact.php">Contact Us</a>
                 </li>
 
 
@@ -86,15 +121,14 @@
 
     <div class="container my-4">
         <h2>Contact Us</h2>
-        <form action="#" onsubmit="return validate(this)" method="post">
+        <h5 class="text-center text-success"><?= $result; ?></h5>
+        <form action="" method="post">
             <label for="exampleFormControlInput1">Name </label>
             <div class="form-row form-group">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="First name" required>
+                  <input name="name" type="text" class="form-control" placeholder="name" required>
                 </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name" required>
-                </div>
+                
             </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">Email address</label>
@@ -105,12 +139,22 @@
                 <input type="tel" class="form-control" id="formGroupExampleInput" placeholder="10-digit number" name="phnum" required>
               </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Message</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="formGroupExampleInput">Subject</label>
+                <input class="form-control" placeholder="Enter Subject" name="subject" required>
             </div>
-            <button class="btn btn-primary">submit</button>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea name="msg" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button name="save" class="btn btn-primary">submit</button>
         </form>
     </div>
+
+    <iframe style="position: absolute;top: 100px; right: 5px; padding:15px 25px; width: 225px; height: 500px"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3527820997388!2d72.90946941420141!3d19.048220757796607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c5f39a7d77d1%3A0x9ebbdeaea9ec24ae!2sShah%20%26%20Anchor%20Kutchhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1600839795756!5m2!1sen!2sin"
+        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0">
+    </iframe>
 
     <footer class="container">
         <p>© 2020-2021 Yummy Foods, Inc.</p>
