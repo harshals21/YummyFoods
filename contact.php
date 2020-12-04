@@ -54,6 +54,19 @@ if(isset($_POST['save'])){
     <!-- <link rel="stylesheet" href="style.css"> -->
 
     <title>Yummy Foods- the foodie zone</title>
+    <style>
+        iframe{
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            padding : 30px 25px;
+            text-align: center;
+            width: 50% ;
+            height: 80vh;
+        }
+    </style>
 
     <SCRIPT type="text/javascript">
         function validate(thisform)
@@ -150,7 +163,7 @@ if(isset($_POST['save'])){
         </form>
     </div>
 
-    <iframe style="position: absolute;top: 100px; right: 5px; padding:15px 25px; width: 225px; height: 500px"
+    <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.3527820997388!2d72.90946941420141!3d19.048220757796607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c5f39a7d77d1%3A0x9ebbdeaea9ec24ae!2sShah%20%26%20Anchor%20Kutchhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1600839795756!5m2!1sen!2sin"
         width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
         tabindex="0">
