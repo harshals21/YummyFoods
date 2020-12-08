@@ -95,7 +95,7 @@ if(isset($_POST['save'])){
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="assests/img/logo.png" width="40" height="40"  alt="error 404">
+            <img src="assets/img/logo.png" width="40" height="40"  alt="error 404">
           </a>
         <a class="navbar-brand" href="#" style="color: orangered">YummyFoods</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

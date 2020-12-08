@@ -37,7 +37,7 @@
             <p>We wish that you get inspire and motivated reading our blogs and share your thoughts about it. It's our attempt to contribute to the food blogging community and reach out to the millions of foodies out there.Don't miss this great opportunity reading this amazing blogs on varities of food by world-class bloggers. So, signup and start your blogging journey with us as we would help you in documenting your journey wonderfully..😃 So, what are you waiting for? Get started with us on journey of food blogging.</p>
         </div>
         <div class="content-right">
-            <img src="assests/img/logo.png" alt="YummyFoods">
+            <img src="assets/img/logo.png" alt="YummyFoods">
         </div>
     </div>
 
@@ -49,7 +49,7 @@
     
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/1.png" alt="article">
+                <img src="assets/img/1.png" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">
@@ -62,7 +62,7 @@
         </div>
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/2.jpg" alt="article">
+                <img src="assets/img/2.jpg" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">
@@ -75,7 +75,7 @@
         </div>
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/3.jpg" alt="article">
+                <img src="assets/img/3.jpg" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">
@@ -88,7 +88,7 @@
         </div>
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/4.jpg" alt="article">
+                <img src="assets/img/4.jpg" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">
@@ -101,7 +101,7 @@
         </div>
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/5.jpg" alt="article">
+                <img src="assets/img/5.jpg" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">
@@ -114,7 +114,7 @@
         </div>
         <div class="home-article">
             <div class="home-article-img">
-                <img src="assests/img/6.jpg" alt="article">
+                <img src="assets/img/6.jpg" alt="article">
             </div>
             <div class="home-article-content font1">
                 <a href="./blogpost.html">

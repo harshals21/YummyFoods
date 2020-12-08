@@ -24,7 +24,7 @@ nav ul li:hover{
 #home::before{ 
   content: "";
   position: absolute;
-  background: url('../assests/img/bg1.jpg') no-repeat center center/cover;
+  background: url('../assets/img/bg1.jpg') no-repeat center center/cover;
   height: 770px;
   top:0px;
   left:0px;
