@@ -138,7 +138,7 @@
 
     <div class="container my-4">
         <h2>Contact Us</h2>
-        <h5 class="text-center text-success"><?= $result; ?></h5>
+        <!-- <h5 class="text-center text-success"></h5> -->
         <form action="#" onsubmit="return validate(this)"  method="post">
             <label for="exampleFormControlInput1">Name </label>
             <div class="form-row form-group">
