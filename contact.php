@@ -1,35 +1,35 @@
 <?php
 
-$result="";
+// $result="";
 
-if(isset($_POST['save'])){
-    require 'phpmailer/PHPMailerAutoload.php';
-    $mail = new PHPMailer;
+// if(isset($_POST['save'])){
+//     require 'phpmailer/PHPMailerAutoload.php';
+//     $mail = new PHPMailer;
 
-    $mail->isSMTP();
-    $mail->Host='smtp.gmail.com';
-    $mail->Port='587';
-    $mail->SMTPAuth=true;
-    $mail->SMTPSecure='tls';
-    $mail->Username='yfoods14@gmail.com';
-    $mail->Password='Yummy1234';
+//     $mail->isSMTP();
+//     $mail->Host='smtp.gmail.com';
+//     $mail->Port='587';
+//     $mail->SMTPAuth=true;
+//     $mail->SMTPSecure='tls';
+//     $mail->Username='yfoods14@gmail.com';
+//     $mail->Password='Yummy1234';
     
 
-    $mail->setFrom($_POST['email']);
-    $mail->addAddress('yfoods14@gmail.com');
-    $mail->addReplyTo($_POST['email']);
+//     $mail->setFrom($_POST['email']);
+//     $mail->addAddress('yfoods14@gmail.com');
+//     $mail->addReplyTo($_POST['email']);
 
-    $mail->isHTML(true);
-    $mail->Subject='Form Submission: '.$_POST['subject'];
-    $mail->Body='<h1 align=center>Name: '.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['msg'].'<br>PHONE: '.$_POST['phnum'].'</h1>';
+//     $mail->isHTML(true);
+//     $mail->Subject='Form Submission: '.$_POST['subject'];
+//     $mail->Body='<h1 align=center>Name: '.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['msg'].'<br>PHONE: '.$_POST['phnum'].'</h1>';
 
-    if(!$mail->send()){
-        $result="Something went wrong. Please try again.";
-    }
-    else{
-        $result="Thanks ".$_POST['name']." for contacting us. We'll get back to you soon!";
-    }
-}
+//     if(!$mail->send()){
+//         $result="Something went wrong. Please try again.";
+//     }
+//     else{
+//         $result="Thanks ".$_POST['name']." for contacting us. We'll get back to you soon!";
+//     }
+// }
 
 ?>
 
@@ -119,10 +119,14 @@ if(isset($_POST['save'])){
 
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search food" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank" method="GET">
+                <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search food"
+                    aria-label="Search" list='list1' name="q">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <datalist id="list1">
+                <!-- will add suggestion here -->
+            </datalist>
             <div class="mx-2">
                 <!-- Example single danger button -->
                 <button onclick="location.href='login.html'"  class="btn btn-danger">Log In</button>
@@ -135,7 +139,7 @@ if(isset($_POST['save'])){
     <div class="container my-4">
         <h2>Contact Us</h2>
         <h5 class="text-center text-success"><?= $result; ?></h5>
-        <form action="" method="post">
+        <form action="#" onsubmit="return validate(this)"  method="post">
             <label for="exampleFormControlInput1">Name </label>
             <div class="form-row form-group">
                 <div class="col">

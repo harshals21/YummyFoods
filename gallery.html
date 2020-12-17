@@ -85,10 +85,14 @@ function clearContent()
 
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search food" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank" method="GET">
+          <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search food"
+              aria-label="Search" list='list1' name="q">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <datalist id="list1">
+          <!-- will add suggestion here -->
+      </datalist>
         <div class="mx-2">
             <!-- Example single danger button -->
             <button onclick="location.href='login.html'"  class="btn btn-danger">Log In</button>
